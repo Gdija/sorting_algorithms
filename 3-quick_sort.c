@@ -1,11 +1,11 @@
 #include "sort.h"
 /**
  * lomuto_partition - assuming the pivot element as the last element
- * @array: array of integers 
+ * @array: array of integers
  * @start: first element in the array
  * @end: last element in the array
  * @size: size of the array
- * Return : index of pivot
+ * Return: index of pivot
  */
 int lomuto_partition(int *array, int start, int end, size_t size)
 {
@@ -31,7 +31,7 @@ int lomuto_partition(int *array, int start, int end, size_t size)
 	return (x);
 }
 /**
- * quick_lumoto - quick sort algo recursion
+ * quick_lomuto - quick sort algo recursion
  * @array: array of integers
  * @start: first element in the array
  * @end: last element in the array
