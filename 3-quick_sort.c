@@ -10,24 +10,30 @@
 int lomuto_partition(int *array, int start, int end, size_t size)
 {
 	int pvt = array[end];
-	int x = start - 1;
+	int x = start;
 	int temp, y;
 
-	for (y = start; y <= end - 1; y++)
+	for (y = start; y < end; y++)
 	{
-	if (array[y] < pvt)
+	if (array[y] <= pvt)
 	{
-	x++;
+	if (x != y)
+	{
 	temp = array[x];
 	array[x] = array[y];
 	array[y] = temp;
-	}
+	print_array(array, size);
 	}
 	x++;
+	}
+	}
+	if (x != end)
+	{
 	temp = array[x];
 	array[x] = array[end];
 	array[end] = temp;
 	print_array(array, size);
+	}
 	return (x);
 }
 /**
